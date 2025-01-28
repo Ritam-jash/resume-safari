@@ -2,6 +2,9 @@ import { Upload, Search, FileText, Briefcase } from "lucide-react";
 import Navbar from "../components/Navbar";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
+import { SplineScene } from "../components/ui/splite";
+import { Card } from "../components/ui/card";
+import { Spotlight } from "../components/ui/spotlight";
 
 const features = [
   {
@@ -32,17 +35,37 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-fade-up">
-            Hire Your AI Agent
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Complete your resume screening task in under 30 seconds and save hours of effort!
-          </p>
-          <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors animate-fade-up shadow-lg hover:shadow-xl" style={{ animationDelay: "0.2s" }}>
-            Get Started Now
-          </button>
+      <section className="pt-20 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
+            <Spotlight
+              className="-top-40 left-0 md:left-60 md:-top-20"
+              fill="white"
+            />
+            
+            <div className="flex h-full flex-col md:flex-row">
+              {/* Left content */}
+              <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
+                <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 animate-fade-up">
+                  Hire Your AI Agent
+                </h1>
+                <p className="mt-4 text-neutral-300 max-w-lg animate-fade-up" style={{ animationDelay: "0.1s" }}>
+                  Complete your resume screening task in under 30 seconds and save hours of effort!
+                </p>
+                <button className="mt-8 bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors animate-fade-up w-fit" style={{ animationDelay: "0.2s" }}>
+                  Get Started Now
+                </button>
+              </div>
+
+              {/* Right content */}
+              <div className="flex-1 relative">
+                <SplineScene 
+                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
