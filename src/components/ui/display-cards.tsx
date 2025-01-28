@@ -45,6 +45,8 @@ interface DisplayCardsProps {
   cards?: DisplayCardProps[];
 }
 
+export { DisplayCard };
+export type { DisplayCardProps, DisplayCardsProps };
 export default function DisplayCards({ cards }: DisplayCardsProps) {
   const defaultCards = [
     {
