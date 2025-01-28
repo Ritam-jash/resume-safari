@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { SplineScene } from "../components/ui/splite";
 import { Card } from "../components/ui/card";
 import { Spotlight } from "../components/ui/spotlight";
+import DisplayCards from "../components/ui/display-cards";
 
 const features = [
   {
