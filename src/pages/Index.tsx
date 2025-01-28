@@ -40,7 +40,6 @@ const Index = () => {
           <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
             <Spotlight
               className="-top-40 left-0 md:left-60 md:-top-20"
-              fill="white"
             />
             
             <div className="flex h-full flex-col md:flex-row">
@@ -75,13 +74,23 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Powerful Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={feature.title} style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
-                <FeatureCard {...feature} />
-              </div>
-            ))}
-          </div>
+          <DisplayCards 
+            cards={features.map((feature, index) => ({
+              icon: <feature.icon className="size-4 text-primary" />,
+              title: feature.title,
+              description: feature.description,
+              date: "Available Now",
+              iconClassName: "text-primary",
+              titleClassName: "text-primary",
+              className: `[grid-area:stack] ${
+                index === 0 
+                  ? "hover:-translate-y-10" 
+                  : index === 1 
+                  ? "translate-x-16 translate-y-10 hover:-translate-y-1"
+                  : "translate-x-32 translate-y-20 hover:translate-y-10"
+              } before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0`
+            }))}
+          />
         </div>
       </section>
 
