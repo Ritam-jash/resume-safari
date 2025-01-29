@@ -39,6 +39,7 @@ export function FeaturesSectionWithBentoGrid() {
       className: "col-span-1 md:col-span-3 lg:col-span-3 border-b md:border-none",
     },
   ];
+
   return (
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
@@ -108,8 +109,8 @@ export const SkeletonOne = () => {
       <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
         <div className="flex flex-1 w-full h-full flex-col space-y-2">
           <img
-            src="/resume-screening.jpg"
-            alt="Resume Screening"
+            src="/lovable-uploads/17299663-c586-4563-87f1-ca0974031e81.png"
+            alt="AI Resume Screening"
             className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
           />
         </div>
