@@ -6,39 +6,39 @@ const PricingSection = () => {
       <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
         <div className="mb-12 space-y-3">
           <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-            Simple, Transparent Pricing
+            Choose Your Plan
           </h2>
           <p className="text-center text-base text-muted-foreground md:text-lg">
-            Choose the plan that best fits your needs. All plans include a 14-day free trial.
+            Find the perfect plan to streamline your hiring process
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <PricingCard
-            tier="Starter"
-            price="$0/mo"
-            bestFor="Perfect for side projects"
-            CTA="Start for free"
+            tier="Basic"
+            price="$0"
+            bestFor="Perfect for small businesses"
+            CTA="Get Started"
             benefits={[
-              { text: "Up to 3 AI models", checked: true },
-              { text: "1,000 API calls/month", checked: true },
-              { text: "Basic analytics dashboard", checked: true },
-              { text: "Community support", checked: true },
-              { text: "Custom model training", checked: false },
-              { text: "Priority support", checked: false },
+              { text: "10 resumes/month", checked: true },
+              { text: "Basic AI screening", checked: true },
+              { text: "Email support", checked: true },
+              { text: "Advanced AI matching", checked: false },
+              { text: "Custom filters", checked: false },
+              { text: "API access", checked: false },
             ]}
           />
           <PricingCard
-            tier="Professional"
+            tier="Pro"
             price="$49/mo"
-            bestFor="For growing businesses"
-            CTA="Start free trial"
+            bestFor="For growing companies"
+            CTA="Get Started"
             benefits={[
-              { text: "Up to 10 AI models", checked: true },
-              { text: "50,000 API calls/month", checked: true },
-              { text: "Advanced analytics", checked: true },
-              { text: "Priority email support", checked: true },
-              { text: "Custom model training", checked: true },
-              { text: "API rate limit increase", checked: true },
+              { text: "Unlimited resumes", checked: true },
+              { text: "Advanced AI matching", checked: true },
+              { text: "Priority support", checked: true },
+              { text: "Custom filters", checked: true },
+              { text: "API access", checked: false },
+              { text: "Custom integrations", checked: false },
             ]}
           />
           <PricingCard
@@ -47,12 +47,12 @@ const PricingSection = () => {
             bestFor="For large organizations"
             CTA="Contact sales"
             benefits={[
-              { text: "Unlimited AI models", checked: true },
-              { text: "Unlimited API calls", checked: true },
-              { text: "Custom analytics", checked: true },
-              { text: "24/7 dedicated support", checked: true },
-              { text: "Advanced model training", checked: true },
+              { text: "Custom solutions", checked: true },
+              { text: "Dedicated support", checked: true },
+              { text: "API access", checked: true },
               { text: "Custom integrations", checked: true },
+              { text: "White-label options", checked: true },
+              { text: "Custom SLA", checked: true },
             ]}
           />
         </div>
