@@ -1,70 +1,64 @@
-import { CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-
-const pricingPlans = [
-  {
-    name: "Free",
-    price: "$0",
-    features: ["10 resumes/month", "Basic AI screening", "Email support"],
-    isPopular: false
-  },
-  {
-    name: "Pro",
-    price: "$49",
-    features: ["Unlimited resumes", "Advanced AI matching", "Priority support", "Custom filters"],
-    isPopular: true
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    features: ["Custom solutions", "Dedicated support", "API access", "Custom integrations"],
-    isPopular: false
-  }
-];
+import { PricingCard } from "@/components/ui/dark-gradient-pricing"
 
 const PricingSection = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Simple, Transparent Pricing
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan) => (
-            <Card
-              key={plan.name}
-              className={`p-6 flex flex-col space-y-4 bg-white shadow-lg hover:shadow-xl transition-shadow ${
-                plan.isPopular 
-                  ? "border-2 border-primary relative before:content-['Most Popular'] before:absolute before:-top-4 before:left-1/2 before:-translate-x-1/2 before:bg-primary before:text-white before:px-4 before:py-1 before:rounded-full before:text-sm before:font-medium" 
-                  : "border border-gray-200"
-              }`}
-            >
-              <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-              <p className="text-4xl font-bold text-primary">{plan.price}</p>
-              <ul className="space-y-3 flex-grow text-gray-600">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button
-                className={`w-full ${
-                  plan.isPopular
-                    ? "bg-primary hover:bg-primary/90 text-white"
-                    : "bg-accent hover:bg-accent/90 text-primary"
-                }`}
-              >
-                Get Started
-              </Button>
-            </Card>
-          ))}
+    <section className="relative overflow-hidden bg-background text-foreground">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
+        <div className="mb-12 space-y-3">
+          <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+            Pricing Plans
+          </h2>
+          <p className="text-center text-base text-muted-foreground md:text-lg">
+            Choose the perfect plan for your needs. Upgrade or downgrade at any time.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <PricingCard
+            tier="Free"
+            price="$0/mo"
+            bestFor="Best for individuals"
+            CTA="Get started free"
+            benefits={[
+              { text: "Up to 5 projects", checked: true },
+              { text: "Basic analytics", checked: true },
+              { text: "24-hour support response time", checked: true },
+              { text: "Team collaboration", checked: false },
+              { text: "Custom domains", checked: false },
+              { text: "Advanced security", checked: false },
+            ]}
+          />
+          <PricingCard
+            tier="Pro"
+            price="$29/mo"
+            bestFor="Perfect for small teams"
+            CTA="Start free trial"
+            benefits={[
+              { text: "Unlimited projects", checked: true },
+              { text: "Advanced analytics", checked: true },
+              { text: "4-hour support response time", checked: true },
+              { text: "Team collaboration", checked: true },
+              { text: "Custom domains", checked: true },
+              { text: "Basic security", checked: true },
+            ]}
+          />
+          <PricingCard
+            tier="Enterprise"
+            price="Custom"
+            bestFor="For large organizations"
+            CTA="Contact sales"
+            benefits={[
+              { text: "Everything in Pro", checked: true },
+              { text: "Custom analytics", checked: true },
+              { text: "1-hour support response time", checked: true },
+              { text: "Advanced collaboration", checked: true },
+              { text: "Multiple custom domains", checked: true },
+              { text: "Advanced security", checked: true },
+            ]}
+          />
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default PricingSection;
+export default PricingSection
