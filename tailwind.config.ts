@@ -40,6 +40,9 @@ export default {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
+      maxWidth: {
+        container: "1280px",
+      },
       keyframes: {
         "fade-up": {
           "0%": {
@@ -59,10 +62,15 @@ export default {
             opacity: "1",
           },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
+        marquee: "marquee var(--duration) linear infinite",
       },
     },
   },
