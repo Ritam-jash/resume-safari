@@ -35,18 +35,18 @@ export function TestimonialsSection({
         </div>
 
         <div className="relative w-full overflow-hidden py-4">
-          <div className="flex animate-marquee space-x-8 group-hover:[animation-play-state:paused]">
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex space-x-8">
-                {testimonials.map((testimonial, i) => (
+          <div className="flex [--gap:1rem] [gap:var(--gap)] [--duration:40s]">
+            <div className="flex shrink-0 justify-around gap-8 animate-[marquee_var(--duration)_linear_infinite] group-hover:[animation-play-state:paused]">
+              {[...Array(4)].map((_, setIndex) => (
+                testimonials.map((testimonial, i) => (
                   <TestimonialCard 
                     key={`${setIndex}-${i}`}
                     {...testimonial}
                     className="shrink-0"
                   />
-                ))}
-              </div>
-            ))}
+                ))
+              ))}
+            </div>
           </div>
 
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background" />
