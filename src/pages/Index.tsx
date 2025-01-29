@@ -14,22 +14,22 @@ const features = [
   {
     icon: Upload,
     title: "Bulk Resume Upload",
-    description: "Upload multiple resumes at once and let AI handle the screening.",
+    description: "Upload multiple resumes at once and let AI handle the screening process efficiently. Save hours of manual work.",
   },
   {
     icon: Search,
     title: "Job Matching",
-    description: "Advanced AI matching between job requirements and candidate profiles.",
+    description: "Our advanced AI matches job requirements with candidate profiles using deep learning algorithms for precise results.",
   },
   {
     icon: FileText,
     title: "ATS-Compatible Resume",
-    description: "Create ATS-friendly resumes that pass through screening systems.",
+    description: "Create professional resumes that pass through Applicant Tracking Systems with our AI-powered formatting.",
   },
   {
     icon: Briefcase,
     title: "Job Suggestions",
-    description: "Get personalized job recommendations based on your profile.",
+    description: "Receive tailored job recommendations based on your skills, experience, and career preferences.",
   },
 ];
 
@@ -216,21 +216,18 @@ const Index = () => {
             {pricingPlans.map((plan) => (
               <Card
                 key={plan.name}
-                className={`p-6 flex flex-col space-y-4 ${
-                  plan.isPopular ? "border-2 border-primary" : ""
+                className={`p-6 flex flex-col space-y-4 bg-white shadow-lg ${
+                  plan.isPopular 
+                    ? "border-2 border-primary relative before:content-['Most Popular'] before:absolute before:-top-4 before:left-1/2 before:-translate-x-1/2 before:bg-primary before:text-white before:px-4 before:py-1 before:rounded-full before:text-sm before:font-medium" 
+                    : "border border-gray-200"
                 }`}
               >
-                {plan.isPopular && (
-                  <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium w-fit">
-                    Most Popular
-                  </span>
-                )}
-                <h3 className="text-2xl font-bold">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
                 <p className="text-4xl font-bold text-primary">{plan.price}</p>
-                <ul className="space-y-3 flex-grow">
+                <ul className="space-y-3 flex-grow text-gray-600">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-primary" />
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -238,8 +235,8 @@ const Index = () => {
                 <Button
                   className={`w-full ${
                     plan.isPopular
-                      ? "bg-primary hover:bg-primary/90"
-                      : "bg-accent hover:bg-accent/90"
+                      ? "bg-primary hover:bg-primary/90 text-white"
+                      : "bg-accent hover:bg-accent/90 text-primary"
                   }`}
                 >
                   Get Started
