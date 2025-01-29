@@ -65,8 +65,11 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
+      className="w-full fixed top-0 left-0 right-0 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-black/[0.1] dark:border-white/[0.1] flex justify-center items-center space-x-8 px-8 py-6 z-50"
     >
+      <Link to="/" className="text-xl font-bold text-primary">
+        ResumeAI
+      </Link>
       {children}
     </nav>
   );
@@ -108,7 +111,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
+      className="text-neutral-700 dark:text-neutral-200 hover:text-primary transition-colors"
     >
       {children}
     </Link>

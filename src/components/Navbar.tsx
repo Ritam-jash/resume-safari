@@ -1,59 +1,38 @@
 import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { Menu, MenuItem, ProductItem, HoveredLink } from "./ui/navbar-menu";
+import { Menu, MenuItem, HoveredLink } from "./ui/navbar-menu";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <div className="fixed top-4 inset-x-0 max-w-2xl mx-auto z-50">
-      <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink to="/web-dev">Web Development</HoveredLink>
-            <HoveredLink to="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink to="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink to="/branding">Branding</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Resume Builder"
-              href="/resume-builder"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Create professional resumes with AI assistance."
-            />
-            <ProductItem
-              title="CV Templates"
-              href="/cv-templates"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Choose from our collection of modern CV templates."
-            />
-            <ProductItem
-              title="Career Tools"
-              href="/career-tools"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Essential tools for your career development."
-            />
-            <ProductItem
-              title="AI Assistant"
-              href="/ai-assistant"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Get personalized career advice with our AI assistant."
-            />
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink to="/hobby">Basic Plan</HoveredLink>
-            <HoveredLink to="/individual">Pro Plan</HoveredLink>
-            <HoveredLink to="/team">Team Plan</HoveredLink>
-            <HoveredLink to="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-      </Menu>
-    </div>
+    <Menu setActive={setActive}>
+      <MenuItem setActive={setActive} active={active} item="For HR">
+        <div className="flex flex-col space-y-4 text-sm">
+          <HoveredLink to="/hr/screening">Resume Screening</HoveredLink>
+          <HoveredLink to="/hr/analytics">Analytics</HoveredLink>
+          <HoveredLink to="/hr/team">Team Management</HoveredLink>
+        </div>
+      </MenuItem>
+      <MenuItem setActive={setActive} active={active} item="For Students">
+        <div className="flex flex-col space-y-4 text-sm">
+          <HoveredLink to="/students/builder">Resume Builder</HoveredLink>
+          <HoveredLink to="/students/templates">Templates</HoveredLink>
+          <HoveredLink to="/students/tips">Career Tips</HoveredLink>
+        </div>
+      </MenuItem>
+      <MenuItem setActive={setActive} active={active} item="How It Works">
+        <div className="flex flex-col space-y-4 text-sm">
+          <HoveredLink to="/features">Features</HoveredLink>
+          <HoveredLink to="/process">Process</HoveredLink>
+          <HoveredLink to="/testimonials">Testimonials</HoveredLink>
+        </div>
+      </MenuItem>
+      <HoveredLink to="/contact">Contact Us</HoveredLink>
+      <Button className="bg-primary text-white px-6 py-2 rounded-full hover:opacity-90">
+        Get Started
+      </Button>
+    </Menu>
   );
 };
 
