@@ -5,9 +5,9 @@ import { SplineScene } from "@/components/ui/splite";
 
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-32 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <Card className="w-full h-[700px] bg-black/[0.96] relative overflow-hidden">
+    <section className="min-h-screen pt-16 px-0 sm:px-0 lg:px-0">
+      <div className="h-[calc(100vh-4rem)]">
+        <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden rounded-none">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="purple"
