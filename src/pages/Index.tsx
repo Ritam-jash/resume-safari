@@ -3,7 +3,7 @@ import { TestimonialsSection } from "../components/blocks/testimonials-with-marq
 import { AnimatedGradientDemo } from "@/components/ui/animated-gradient-demo";
 import { Footerdemo } from "@/components/ui/footer-section";
 import HeroSection from "@/components/sections/HeroSection";
-import FeaturesSection from "@/components/sections/FeaturesSection";
+import { FeaturesSectionWithBentoGrid } from "@/components/ui/feature-section-with-bento-grid";
 import PricingSection from "@/components/sections/PricingSection";
 import MarketingSection from "@/components/sections/MarketingSection";
 
@@ -41,7 +41,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#403E43]">
       <Navbar />
       <HeroSection />
-      <FeaturesSection />
+      <FeaturesSectionWithBentoGrid />
       <AnimatedGradientDemo />
       <TestimonialsSection
         title="Trusted by developers worldwide"
