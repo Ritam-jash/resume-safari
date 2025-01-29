@@ -8,6 +8,7 @@ import { Spotlight } from "../components/ui/spotlight";
 import { TestimonialsSection } from "../components/blocks/testimonials-with-marquee";
 import { Button } from "@/components/ui/button";
 import { AnimatedGradientDemo } from "@/components/ui/animated-gradient-demo";
+import { Footerdemo } from "@/components/ui/footer-section";
 
 const features = [
   {
@@ -267,7 +268,7 @@ const Index = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footerdemo />
     </div>
   );
 };
