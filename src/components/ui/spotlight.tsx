@@ -1,12 +1,15 @@
 import { useRef } from "react";
-import { useSpring, SpringOptions } from "@react-spring/web";
+import { useSpring, SpringValue } from "@react-spring/web";
 import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
   className?: string;
   size?: number;
   fill?: string;
-  springOptions?: SpringOptions;
+  springOptions?: {
+    bounce?: number;
+    [key: string]: any;
+  };
 };
 
 export function Spotlight({
@@ -66,7 +69,7 @@ export function Spotlight({
       style={{
         width: size,
         height: size,
-        transform: `translate3d(${x.get()}px, ${y.get()}px, 0)`,
+        transform: `translate3d(${(x as SpringValue<number>).get()}px, ${(y as SpringValue<number>).get()}px, 0)`,
       }}
     />
   );
