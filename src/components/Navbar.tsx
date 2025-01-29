@@ -1,74 +1,59 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Menu, MenuItem, ProductItem, HoveredLink } from "./ui/navbar-menu";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { label: "For HR", href: "#" },
-    { label: "For Students", href: "#" },
-    { label: "How It Works", href: "#" },
-    { label: "Contact Us", href: "#" },
-  ];
+  const [active, setActive] = useState<string | null>(null);
 
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <a href="/" className="text-xl font-bold text-primary">
-              ResumeAI
-            </a>
+    <div className="fixed top-4 inset-x-0 max-w-2xl mx-auto z-50">
+      <Menu setActive={setActive}>
+        <MenuItem setActive={setActive} active={active} item="Services">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink to="/web-dev">Web Development</HoveredLink>
+            <HoveredLink to="/interface-design">Interface Design</HoveredLink>
+            <HoveredLink to="/seo">Search Engine Optimization</HoveredLink>
+            <HoveredLink to="/branding">Branding</HoveredLink>
           </div>
-
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-            <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-              Get Started
-            </button>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Products">
+          <div className="text-sm grid grid-cols-2 gap-10 p-4">
+            <ProductItem
+              title="Resume Builder"
+              href="/resume-builder"
+              src="https://assets.aceternity.com/demos/algochurn.webp"
+              description="Create professional resumes with AI assistance."
+            />
+            <ProductItem
+              title="CV Templates"
+              href="/cv-templates"
+              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+              description="Choose from our collection of modern CV templates."
+            />
+            <ProductItem
+              title="Career Tools"
+              href="/career-tools"
+              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+              description="Essential tools for your career development."
+            />
+            <ProductItem
+              title="AI Assistant"
+              href="/ai-assistant"
+              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+              description="Get personalized career advice with our AI assistant."
+            />
           </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-primary transition-colors"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Pricing">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink to="/hobby">Basic Plan</HoveredLink>
+            <HoveredLink to="/individual">Pro Plan</HoveredLink>
+            <HoveredLink to="/team">Team Plan</HoveredLink>
+            <HoveredLink to="/enterprise">Enterprise</HoveredLink>
           </div>
-        </div>
-
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-600 hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <button className="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-                Get Started
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
+        </MenuItem>
+      </Menu>
+    </div>
   );
 };
 
