@@ -7,6 +7,9 @@ const Navbar = () => {
 
   return (
     <Menu setActive={setActive}>
+      <Link to="/" className="text-xl font-bold text-primary">
+        ResumeAI
+      </Link>
       <MenuItem setActive={setActive} active={active} item="For HR">
         <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink to="/hr/screening">Resume Screening</HoveredLink>

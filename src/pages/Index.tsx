@@ -40,17 +40,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#403E43]">
       <Navbar />
-      <HeroSection />
-      <FeaturesSectionWithBentoGrid />
-      <AnimatedGradientDemo />
-      <TestimonialsSection
-        title="Trusted by developers worldwide"
-        description="Join thousands of developers who are already building the future with our AI platform"
-        testimonials={testimonials}
-      />
-      <PricingSection />
-      <MarketingSection />
-      <Footerdemo />
+      <div className="pt-24"> {/* Added padding to account for fixed navbar */}
+        <HeroSection />
+        <FeaturesSectionWithBentoGrid />
+        <AnimatedGradientDemo />
+        <TestimonialsSection
+          title="Trusted by developers worldwide"
+          description="Join thousands of developers who are already building the future with our AI platform"
+          testimonials={testimonials}
+        />
+        <PricingSection />
+        <MarketingSection />
+        <Footerdemo />
+      </div>
     </div>
   );
 };
