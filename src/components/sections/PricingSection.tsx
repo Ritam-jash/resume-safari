@@ -6,39 +6,39 @@ const PricingSection = () => {
       <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
         <div className="mb-12 space-y-3">
           <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-            Pricing Plans
+            Simple, Transparent Pricing
           </h2>
           <p className="text-center text-base text-muted-foreground md:text-lg">
-            Choose the perfect plan for your needs. Upgrade or downgrade at any time.
+            Choose the plan that best fits your needs. All plans include a 14-day free trial.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <PricingCard
-            tier="Free"
+            tier="Starter"
             price="$0/mo"
-            bestFor="Best for individuals"
-            CTA="Get started free"
+            bestFor="Perfect for side projects"
+            CTA="Start for free"
             benefits={[
-              { text: "Up to 5 projects", checked: true },
-              { text: "Basic analytics", checked: true },
-              { text: "24-hour support response time", checked: true },
-              { text: "Team collaboration", checked: false },
-              { text: "Custom domains", checked: false },
-              { text: "Advanced security", checked: false },
+              { text: "Up to 3 AI models", checked: true },
+              { text: "1,000 API calls/month", checked: true },
+              { text: "Basic analytics dashboard", checked: true },
+              { text: "Community support", checked: true },
+              { text: "Custom model training", checked: false },
+              { text: "Priority support", checked: false },
             ]}
           />
           <PricingCard
-            tier="Pro"
-            price="$29/mo"
-            bestFor="Perfect for small teams"
+            tier="Professional"
+            price="$49/mo"
+            bestFor="For growing businesses"
             CTA="Start free trial"
             benefits={[
-              { text: "Unlimited projects", checked: true },
+              { text: "Up to 10 AI models", checked: true },
+              { text: "50,000 API calls/month", checked: true },
               { text: "Advanced analytics", checked: true },
-              { text: "4-hour support response time", checked: true },
-              { text: "Team collaboration", checked: true },
-              { text: "Custom domains", checked: true },
-              { text: "Basic security", checked: true },
+              { text: "Priority email support", checked: true },
+              { text: "Custom model training", checked: true },
+              { text: "API rate limit increase", checked: true },
             ]}
           />
           <PricingCard
@@ -47,12 +47,12 @@ const PricingSection = () => {
             bestFor="For large organizations"
             CTA="Contact sales"
             benefits={[
-              { text: "Everything in Pro", checked: true },
+              { text: "Unlimited AI models", checked: true },
+              { text: "Unlimited API calls", checked: true },
               { text: "Custom analytics", checked: true },
-              { text: "1-hour support response time", checked: true },
-              { text: "Advanced collaboration", checked: true },
-              { text: "Multiple custom domains", checked: true },
-              { text: "Advanced security", checked: true },
+              { text: "24/7 dedicated support", checked: true },
+              { text: "Advanced model training", checked: true },
+              { text: "Custom integrations", checked: true },
             ]}
           />
         </div>
