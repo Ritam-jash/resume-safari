@@ -22,6 +22,7 @@ const PricingSection = () => {
               { text: "10 resumes/month", checked: true },
               { text: "Basic AI screening", checked: true },
               { text: "Email support", checked: true },
+              { text: "Team access", checked: false },
               { text: "Advanced AI matching", checked: false },
               { text: "Custom filters", checked: false },
               { text: "API access", checked: false },
@@ -36,6 +37,7 @@ const PricingSection = () => {
               { text: "Unlimited resumes", checked: true },
               { text: "Advanced AI matching", checked: true },
               { text: "Priority support", checked: true },
+              { text: "2 team members access", checked: true },
               { text: "Custom filters", checked: true },
               { text: "API access", checked: false },
               { text: "Custom integrations", checked: false },
@@ -49,6 +51,7 @@ const PricingSection = () => {
             benefits={[
               { text: "Custom solutions", checked: true },
               { text: "Dedicated support", checked: true },
+              { text: "Unlimited team access", checked: true },
               { text: "API access", checked: true },
               { text: "Custom integrations", checked: true },
               { text: "White-label options", checked: true },
