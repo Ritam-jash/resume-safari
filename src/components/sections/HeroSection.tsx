@@ -22,7 +22,7 @@ const HeroSection = () => {
                 Complete your resume screening task in under 30 seconds and save hours of effort!
               </p>
               <GradientButton 
-                className="mt-12 animate-fade-up w-[160px] h-[56px] !px-4 !py-3"
+                className="mt-12 animate-fade-up w-[200px] h-[64px] !px-6 !py-4"
                 variant="variant"
               >
                 Get Started Now
