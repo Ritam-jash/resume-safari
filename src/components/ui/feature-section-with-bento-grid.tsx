@@ -10,7 +10,7 @@ import {
 
 export function FeaturesSectionWithBentoGrid() {
   return (
-    <div className="bg-background text-foreground relative">
+    <div className="bg-[#1A1F2C] text-foreground relative">
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
