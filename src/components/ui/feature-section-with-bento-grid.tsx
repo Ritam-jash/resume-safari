@@ -40,7 +40,7 @@ export function FeaturesSectionWithBentoGrid() {
   ];
 
   return (
-    <div className="relative bg-[#1A1F2C] -mt-1"> {/* Added bg color and negative margin to remove gap */}
+    <div className="relative">
       <div className="absolute inset-0 h-full w-full">
         <Squares 
           direction="diagonal"
@@ -51,7 +51,7 @@ export function FeaturesSectionWithBentoGrid() {
         />
       </div>
       
-      <div className="relative z-10 py-16 max-w-7xl mx-auto"> {/* Adjusted padding */}
+      <div className="relative z-10 py-12 max-w-7xl mx-auto">
         <div className="px-8">
           <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
             Powerful Resume Screening Features
