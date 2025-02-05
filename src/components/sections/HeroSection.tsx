@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen">
       <div className="h-[calc(100vh-4rem)]">
-        <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden rounded-none">
+        <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden rounded-none border-none">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="purple"
@@ -29,7 +29,7 @@ const HeroSection = () => {
               </GradientButton>
             </div>
 
-            <div className="flex-1 relative">
+            <div className="flex-1 relative bg-black/[0.96]">
               <SplineScene 
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
