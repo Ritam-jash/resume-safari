@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
@@ -52,7 +51,7 @@ export function FeaturesSectionWithBentoGrid() {
         />
       </div>
       
-      <div className="relative z-10 py-10 lg:py-40 max-w-7xl mx-auto">
+      <div className="relative z-10 py-4 lg:py-20 max-w-7xl mx-auto">
         <div className="px-8">
           <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
             Powerful Resume Screening Features
@@ -278,4 +277,3 @@ export const Globe = ({ className }: { className?: string }) => {
     />
   );
 };
-
