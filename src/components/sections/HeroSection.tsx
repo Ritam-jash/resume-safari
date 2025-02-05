@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { SplineScene } from "@/components/ui/splite";
+import { GradientButton } from "@/components/ui/gradient-button";
 
 const HeroSection = () => {
   return (
@@ -21,12 +21,12 @@ const HeroSection = () => {
               <p className="mt-6 text-xl text-neutral-300 max-w-lg animate-fade-up opacity-90">
                 Complete your resume screening task in under 30 seconds and save hours of effort!
               </p>
-              <Button 
-                className="mt-12 bg-gradient-to-r from-primary via-purple-600 to-primary hover:opacity-90 text-white px-10 py-8 rounded-lg text-xl font-semibold transition-all duration-300 animate-fade-up w-fit"
-                size="lg"
+              <GradientButton 
+                className="mt-12 animate-fade-up"
+                variant="variant"
               >
                 Get Started Now
-              </Button>
+              </GradientButton>
             </div>
 
             <div className="flex-1 relative">
