@@ -39,6 +39,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        geist: ["var(--font-geist-sans)"],
       },
       maxWidth: {
         container: "1280px",
@@ -66,6 +67,10 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(calc(-100% - var(--gap)))" },
         },
+        grid: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(calc(var(--cell-size) * -1))" },
+        },
         "background-gradient": {
           "0%, 100%": {
             transform: "translate(0, 0)",
@@ -88,23 +93,14 @@ export default {
               "translate(calc(100% * var(--tx-4, -1)), calc(100% * var(--ty-4, -1)))",
           },
         },
-        'star-movement-bottom': {
-          '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
-          '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
-        },
-        'star-movement-top': {
-          '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
-          '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
-        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         marquee: "marquee var(--duration) linear infinite",
+        grid: "grid 20s linear infinite",
         "background-gradient":
           "background-gradient var(--background-gradient-speed, 15s) cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite",
-        'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
-        'star-movement-top': 'star-movement-top linear infinite alternate',
       },
     },
   },

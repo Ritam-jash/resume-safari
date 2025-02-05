@@ -2,10 +2,10 @@ import Navbar from "../components/Navbar";
 import { TestimonialsSection } from "../components/blocks/testimonials-with-marquee";
 import { AnimatedGradientDemo } from "@/components/ui/animated-gradient-demo";
 import { Footerdemo } from "@/components/ui/footer-section";
-import HeroSection from "@/components/sections/HeroSection";
 import { FeaturesSectionWithBentoGrid } from "@/components/ui/feature-section-with-bento-grid";
 import PricingSection from "@/components/sections/PricingSection";
 import MarketingSection from "@/components/sections/MarketingSection";
+import { HeroSection } from "@/components/blocks/hero-section-dark";
 
 const testimonials = [
   {
@@ -41,7 +41,27 @@ const Index = () => {
     <div className="min-h-screen bg-[#060606]">
       <Navbar />
       <div className="pt-24">
-        <HeroSection />
+        <HeroSection 
+          title="AI-Powered Resume Screening"
+          subtitle={{
+            regular: "Complete your resume screening in ",
+            gradient: "under 30 seconds",
+          }}
+          description="Our AI-powered platform revolutionizes the hiring process by analyzing resumes with unprecedented speed and accuracy, helping you find the perfect candidates faster than ever."
+          ctaText="Get Started Now"
+          ctaHref="#"
+          bottomImage={{
+            light: "https://www.launchuicomponents.com/app-light.png",
+            dark: "https://www.launchuicomponents.com/app-dark.png",
+          }}
+          gridOptions={{
+            angle: 65,
+            opacity: 0.4,
+            cellSize: 50,
+            lightLineColor: "#4a4a4a",
+            darkLineColor: "#2a2a2a",
+          }}
+        />
         <FeaturesSectionWithBentoGrid />
         <AnimatedGradientDemo />
         <TestimonialsSection
