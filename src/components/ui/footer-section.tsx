@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
-import { Boxes } from "@/components/ui/background-boxes"
 import {
   Tooltip,
   TooltipContent,
@@ -26,10 +25,8 @@ function Footerdemo() {
   }, [isDarkMode])
 
   return (
-    <footer className="relative border-t bg-slate-900 text-foreground transition-colors duration-300 overflow-hidden">
-      <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-      <Boxes />
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8 relative z-30">
+    <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
+      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Updated</h2>
