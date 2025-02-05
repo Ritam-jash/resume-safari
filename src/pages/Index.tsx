@@ -38,13 +38,11 @@ const testimonials = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#1A1F2C]">
+    <div className="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#403E43]">
       <Navbar />
-      <div className="pt-24 bg-[#1A1F2C]">
+      <div className="pt-24"> {/* Added padding to account for fixed navbar */}
         <HeroSection />
-        <div className="bg-[#1A1F2C]">
-          <FeaturesSectionWithBentoGrid />
-        </div>
+        <FeaturesSectionWithBentoGrid />
         <AnimatedGradientDemo />
         <TestimonialsSection
           title="Trusted by developers worldwide"
