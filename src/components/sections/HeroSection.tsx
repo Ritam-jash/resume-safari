@@ -5,7 +5,7 @@ import { GradientButton } from "@/components/ui/gradient-button";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen pt-16 px-0 sm:px-0 lg:px-0">
+    <section className="min-h-screen">
       <div className="h-[calc(100vh-4rem)]">
         <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden rounded-none">
           <Spotlight

@@ -12,38 +12,44 @@ const Navbar = () => {
       <Link to="/" className="text-xl font-bold text-primary">
         ResumeAI
       </Link>
-      <MenuItem setActive={setActive} active={active} item={
-        <StarBorder as="span" className="cursor-pointer" speed="4s">
-          For HR
+      <MenuItem 
+        setActive={setActive} 
+        active={active} 
+        item="For HR"
+      >
+        <StarBorder className="cursor-pointer" speed="4s">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink to="/hr/screening">Resume Screening</HoveredLink>
+            <HoveredLink to="/hr/analytics">Analytics</HoveredLink>
+            <HoveredLink to="/hr/team">Team Management</HoveredLink>
+          </div>
         </StarBorder>
-      }>
-        <div className="flex flex-col space-y-4 text-sm">
-          <HoveredLink to="/hr/screening">Resume Screening</HoveredLink>
-          <HoveredLink to="/hr/analytics">Analytics</HoveredLink>
-          <HoveredLink to="/hr/team">Team Management</HoveredLink>
-        </div>
       </MenuItem>
-      <MenuItem setActive={setActive} active={active} item={
-        <StarBorder as="span" className="cursor-pointer" speed="5s">
-          For Students
+      <MenuItem 
+        setActive={setActive} 
+        active={active} 
+        item="For Students"
+      >
+        <StarBorder className="cursor-pointer" speed="5s">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink to="/students/builder">Resume Builder</HoveredLink>
+            <HoveredLink to="/students/templates">Templates</HoveredLink>
+            <HoveredLink to="/students/tips">Career Tips</HoveredLink>
+          </div>
         </StarBorder>
-      }>
-        <div className="flex flex-col space-y-4 text-sm">
-          <HoveredLink to="/students/builder">Resume Builder</HoveredLink>
-          <HoveredLink to="/students/templates">Templates</HoveredLink>
-          <HoveredLink to="/students/tips">Career Tips</HoveredLink>
-        </div>
       </MenuItem>
-      <MenuItem setActive={setActive} active={active} item={
-        <StarBorder as="span" className="cursor-pointer" speed="6s">
-          How It Works
+      <MenuItem 
+        setActive={setActive} 
+        active={active} 
+        item="How It Works"
+      >
+        <StarBorder className="cursor-pointer" speed="6s">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink to="/features">Features</HoveredLink>
+            <HoveredLink to="/process">Process</HoveredLink>
+            <HoveredLink to="/testimonials">Testimonials</HoveredLink>
+          </div>
         </StarBorder>
-      }>
-        <div className="flex flex-col space-y-4 text-sm">
-          <HoveredLink to="/features">Features</HoveredLink>
-          <HoveredLink to="/process">Process</HoveredLink>
-          <HoveredLink to="/testimonials">Testimonials</HoveredLink>
-        </div>
       </MenuItem>
       <StarBorder as={Link} to="/contact" className="cursor-pointer" speed="4.5s">
         Contact Us
