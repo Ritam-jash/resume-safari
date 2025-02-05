@@ -42,9 +42,7 @@ const Index = () => {
       <Navbar />
       <div className="pt-24">
         <HeroSection />
-        <div className="bg-[#1A1F2C]">
-          <FeaturesSectionWithBentoGrid />
-        </div>
+        <FeaturesSectionWithBentoGrid />
         <AnimatedGradientDemo />
         <TestimonialsSection
           title="Trusted by developers worldwide"
