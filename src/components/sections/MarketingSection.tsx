@@ -16,14 +16,16 @@ const MarketingSection = () => {
         />
       </div>
       
-      <div className="relative z-10 container mx-auto py-12 px-4">
+      <div className="relative z-10 container mx-auto py-16 px-4">
         {/* Marketing Articles */}
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">
             Save Time, Improve Efficiency
           </h2>
-          <FeaturesSectionWithCardGradient />
-          <div className="inline-flex items-center space-x-2 bg-accent/10 backdrop-blur-sm px-6 py-3 rounded-full mt-8">
+          <div className="mb-16">
+            <FeaturesSectionWithCardGradient />
+          </div>
+          <div className="inline-flex items-center space-x-2 bg-accent/10 backdrop-blur-sm px-6 py-3 rounded-full mb-24">
             <span className="text-white font-semibold">Ready to transform your hiring process?</span>
             <Button className="bg-primary text-white hover:bg-primary/90">
               Try Now
@@ -31,8 +33,10 @@ const MarketingSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <CTA />
+        {/* CTA Section with adjusted spacing */}
+        <div className="mt-8">
+          <CTA />
+        </div>
       </div>
     </section>
   );
