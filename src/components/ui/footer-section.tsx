@@ -12,17 +12,26 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { Facebook, Instagram, Linkedin, Moon, Send, Sun, Twitter } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
 
 function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(true)
+  const { toast } = useToast()
 
   React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [isDarkMode])
+    // Always keep dark mode on
+    document.documentElement.classList.add("dark")
+  }, [])
+
+  const handleDarkModeToggle = () => {
+    toast({
+      title: "Dark Mode Only",
+      description: "This section is optimized for dark mode viewing.",
+      duration: 3000,
+    })
+    // Keep the switch in the on position
+    setIsDarkMode(true)
+  }
 
   return (
     <footer className="relative border-t bg-[#060606] text-foreground transition-colors duration-300">
@@ -127,7 +136,7 @@ function Footerdemo() {
               <Switch
                 id="dark-mode"
                 checked={isDarkMode}
-                onCheckedChange={setIsDarkMode}
+                onCheckedChange={handleDarkModeToggle}
               />
               <Moon className="h-4 w-4" />
               <Label htmlFor="dark-mode" className="sr-only">
