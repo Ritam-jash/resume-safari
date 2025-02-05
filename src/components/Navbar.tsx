@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, MenuItem, HoveredLink } from "./ui/navbar-menu";
 import { GradientButton } from "./ui/gradient-button";
+import { StarBorder } from "./ui/star-border";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -11,28 +12,42 @@ const Navbar = () => {
       <Link to="/" className="text-xl font-bold text-primary">
         ResumeAI
       </Link>
-      <MenuItem setActive={setActive} active={active} item="For HR">
+      <MenuItem setActive={setActive} active={active} item={
+        <StarBorder as="span" className="cursor-pointer" speed="4s">
+          For HR
+        </StarBorder>
+      }>
         <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink to="/hr/screening">Resume Screening</HoveredLink>
           <HoveredLink to="/hr/analytics">Analytics</HoveredLink>
           <HoveredLink to="/hr/team">Team Management</HoveredLink>
         </div>
       </MenuItem>
-      <MenuItem setActive={setActive} active={active} item="For Students">
+      <MenuItem setActive={setActive} active={active} item={
+        <StarBorder as="span" className="cursor-pointer" speed="5s">
+          For Students
+        </StarBorder>
+      }>
         <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink to="/students/builder">Resume Builder</HoveredLink>
           <HoveredLink to="/students/templates">Templates</HoveredLink>
           <HoveredLink to="/students/tips">Career Tips</HoveredLink>
         </div>
       </MenuItem>
-      <MenuItem setActive={setActive} active={active} item="How It Works">
+      <MenuItem setActive={setActive} active={active} item={
+        <StarBorder as="span" className="cursor-pointer" speed="6s">
+          How It Works
+        </StarBorder>
+      }>
         <div className="flex flex-col space-y-4 text-sm">
           <HoveredLink to="/features">Features</HoveredLink>
           <HoveredLink to="/process">Process</HoveredLink>
           <HoveredLink to="/testimonials">Testimonials</HoveredLink>
         </div>
       </MenuItem>
-      <HoveredLink to="/contact">Contact Us</HoveredLink>
+      <StarBorder as={Link} to="/contact" className="cursor-pointer" speed="4.5s">
+        Contact Us
+      </StarBorder>
       <GradientButton>Get Started</GradientButton>
     </Menu>
   );
