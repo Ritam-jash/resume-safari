@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, MenuItem, HoveredLink } from "./ui/navbar-menu";
-import { Button } from "./ui/button";
+import { GradientButton } from "./ui/gradient-button";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -33,9 +33,7 @@ const Navbar = () => {
         </div>
       </MenuItem>
       <HoveredLink to="/contact">Contact Us</HoveredLink>
-      <Button className="bg-primary text-white px-6 py-2 rounded-full hover:opacity-90">
-        Get Started
-      </Button>
+      <GradientButton>Get Started</GradientButton>
     </Menu>
   );
 };
