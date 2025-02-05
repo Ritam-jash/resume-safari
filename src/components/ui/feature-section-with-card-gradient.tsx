@@ -3,8 +3,8 @@ import { useId } from "react";
 
 export function FeaturesSectionWithCardGradient() {
   return (
-    <div className="py-20 lg:py-40">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-2 max-w-7xl mx-auto">
+    <div className="py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {grid.map((feature) => (
           <div
             key={feature.title}
