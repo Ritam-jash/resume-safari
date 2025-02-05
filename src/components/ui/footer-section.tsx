@@ -34,7 +34,7 @@ function Footerdemo() {
   }
 
   return (
-    <footer className="relative border-t bg-[#060606] text-foreground transition-colors duration-300 min-h-screen flex items-center">
+    <footer className="relative border-t bg-[#060606] text-foreground transition-colors duration-300 min-h-screen flex items-end">
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
