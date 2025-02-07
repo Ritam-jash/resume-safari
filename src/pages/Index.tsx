@@ -1,3 +1,4 @@
+
 import Navbar from "../components/Navbar";
 import { TestimonialsSection } from "../components/blocks/testimonials-with-marquee";
 import { AnimatedGradientDemo } from "@/components/ui/animated-gradient-demo";
@@ -38,20 +39,22 @@ const testimonials = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#060606]">
+    <div className="min-h-screen bg-[#060606] overflow-x-hidden">
       <Navbar />
-      <div className="pt-24">
+      <div className="pt-16 md:pt-24 px-4 md:px-0">
         <HeroSection />
-        <FeaturesSectionWithBentoGrid />
-        <AnimatedGradientDemo />
-        <TestimonialsSection
-          title="Trusted by developers worldwide"
-          description="Join thousands of developers who are already building the future with our AI platform"
-          testimonials={testimonials}
-        />
-        <PricingSection />
-        <MarketingSection />
-        <Footerdemo />
+        <div className="max-w-[100vw] overflow-hidden">
+          <FeaturesSectionWithBentoGrid />
+          <AnimatedGradientDemo />
+          <TestimonialsSection
+            title="Trusted by developers worldwide"
+            description="Join thousands of developers who are already building the future with our AI platform"
+            testimonials={testimonials}
+          />
+          <PricingSection />
+          <MarketingSection />
+          <Footerdemo />
+        </div>
       </div>
     </div>
   );
