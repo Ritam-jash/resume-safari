@@ -39,25 +39,28 @@ const testimonials = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#060606] overflow-x-hidden">
+    <div className="min-h-screen bg-[#060606] overflow-hidden">
       <Navbar />
-      <div className="pt-16 md:pt-24 px-4 md:px-0">
+      <main className="relative w-full">
         <HeroSection />
-        <div className="max-w-[100vw] overflow-hidden">
-          <FeaturesSectionWithBentoGrid />
-          <AnimatedGradientDemo />
-          <TestimonialsSection
-            title="Trusted by developers worldwide"
-            description="Join thousands of developers who are already building the future with our AI platform"
-            testimonials={testimonials}
-          />
-          <PricingSection />
-          <MarketingSection />
+        <div className="max-w-[100vw]">
+          <div className="px-4 md:px-0">
+            <FeaturesSectionWithBentoGrid />
+            <AnimatedGradientDemo />
+            <TestimonialsSection
+              title="Trusted by developers worldwide"
+              description="Join thousands of developers who are already building the future with our AI platform"
+              testimonials={testimonials}
+            />
+            <PricingSection />
+            <MarketingSection />
+          </div>
           <Footerdemo />
         </div>
-      </div>
+      </main>
     </div>
   );
 };
 
 export default Index;
+
