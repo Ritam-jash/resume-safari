@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -34,12 +35,12 @@ function Footerdemo() {
   }
 
   return (
-    <footer className="relative border-t bg-[#060606] text-foreground transition-colors duration-300 min-h-screen flex items-end">
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative border-t bg-[#060606] text-foreground transition-colors duration-300 min-h-[100vh] flex items-end">
+      <div className="container mx-auto px-4 py-8 md:py-12 md:px-6 lg:px-8">
+        <div className="grid gap-8 md:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Updated</h2>
-            <p className="mb-6 text-muted-foreground">
+            <h2 className="mb-4 text-2xl md:text-3xl font-bold tracking-tight">Stay Updated</h2>
+            <p className="mb-6 text-sm md:text-base text-muted-foreground">
               Get the latest AI resume tips and job market insights.
             </p>
             <form className="relative">
@@ -60,7 +61,7 @@ function Footerdemo() {
             <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
+            <h3 className="mb-4 text-base md:text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2 text-sm">
               <a href="#" className="block transition-colors hover:text-primary">
                 Resume Builder
@@ -80,7 +81,7 @@ function Footerdemo() {
             </nav>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
+            <h3 className="mb-4 text-base md:text-lg font-semibold">Contact Us</h3>
             <address className="space-y-2 text-sm not-italic">
               <p>AI Resume Headquarters</p>
               <p>Silicon Valley, CA 94025</p>
@@ -89,7 +90,7 @@ function Footerdemo() {
             </address>
           </div>
           <div className="relative">
-            <h3 className="mb-4 text-lg font-semibold">Connect With Us</h3>
+            <h3 className="mb-4 text-base md:text-lg font-semibold">Connect With Us</h3>
             <div className="mb-6 flex space-x-4">
               <TooltipProvider>
                 <Tooltip>
@@ -145,11 +146,11 @@ function Footerdemo() {
             </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 md:mt-12 flex flex-col items-center justify-between gap-4 border-t pt-6 md:pt-8 text-center md:flex-row">
+          <p className="text-xs md:text-sm text-muted-foreground">
             © 2024 AI Resume Builder. All rights reserved.
           </p>
-          <nav className="flex gap-4 text-sm">
+          <nav className="flex flex-wrap justify-center gap-4 text-xs md:text-sm">
             <a href="#" className="transition-colors hover:text-primary">
               Privacy Policy
             </a>
