@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 import { TestimonialsSection } from "../components/blocks/testimonials-with-marquee";
 import { AnimatedGradientDemo } from "@/components/ui/animated-gradient-demo";
@@ -39,12 +38,12 @@ const testimonials = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#060606] overflow-hidden">
+    <div className="min-h-screen bg-[#060606] overflow-x-hidden">
       <Navbar />
       <main className="relative w-full">
         <HeroSection />
-        <div className="max-w-[100vw]">
-          <div className="px-4 md:px-0">
+        <div className="w-full">
+          <div className="px-4 md:px-6 lg:px-8 space-y-16 md:space-y-24 py-12 md:py-20">
             <FeaturesSectionWithBentoGrid />
             <AnimatedGradientDemo />
             <TestimonialsSection
@@ -63,4 +62,3 @@ const Index = () => {
 };
 
 export default Index;
-

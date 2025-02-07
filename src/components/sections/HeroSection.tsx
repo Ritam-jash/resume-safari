@@ -6,7 +6,7 @@ import { GradientButton } from "@/components/ui/gradient-button";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen w-full overflow-hidden">
+    <section className="min-h-[100dvh] w-full overflow-hidden pt-16 md:pt-0">
       <div className="h-full w-full">
         <Card className="w-full h-full bg-[#060606] relative overflow-hidden rounded-none border-0">
           <Spotlight
@@ -14,7 +14,7 @@ const HeroSection = () => {
             fill="purple"
           />
           
-          <div className="flex min-h-screen flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row min-h-[calc(100dvh-4rem)]">
             <div className="flex-1 px-4 py-8 md:p-12 relative z-10 flex flex-col justify-center">
               <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 animate-fade-up">
                 Hire Your AI Agent
@@ -44,4 +44,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
