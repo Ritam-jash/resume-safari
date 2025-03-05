@@ -1,4 +1,4 @@
-import { CTA } from "@/components/ui/call-to-action";
+
 import { Button } from "@/components/ui/button";
 import { FeaturesSectionWithCardGradient } from "@/components/ui/feature-section-with-card-gradient";
 import { Squares } from "@/components/ui/squares-background";
@@ -31,11 +31,6 @@ const MarketingSection = () => {
               Try Now
             </Button>
           </div>
-        </div>
-
-        {/* CTA Section with adjusted spacing */}
-        <div className="mt-8">
-          <CTA />
         </div>
       </div>
     </section>
